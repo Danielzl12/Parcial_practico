@@ -9,7 +9,6 @@ public class Domiciliario extends Usuario {
     }
 
     public void aceptarServicio() {
-        System.out.println("El domiciliario " + getNombre() + " ha aceptado un servicio.");
     }
 
     public TipoVehiculo getTipoVehiculo() {

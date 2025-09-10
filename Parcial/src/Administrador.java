@@ -5,6 +5,5 @@ public class Administrador extends Usuario {
     }
 
     public void registrarNuevoDomiciliario(String nombre, String email, TipoVehiculo vehiculo) {
-        System.out.println("Admin " + getNombre() + " ha registrado a un nuevo domiciliario.");
     }
 }

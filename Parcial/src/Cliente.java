@@ -9,7 +9,6 @@ public class Cliente extends Usuario {
     }
 
     public void solicitarServicio() {
-        System.out.println("El cliente " + getNombre() + " ha solicitado un servicio.");
     }
 
     // Getters y Setters
