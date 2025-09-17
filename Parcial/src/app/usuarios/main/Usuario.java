@@ -1,9 +1,9 @@
 package app.usuarios.main;
 
 public abstract class Usuario {
-    private int id;
-    private String nombre;
-    private String numero;
+    protected int id;
+    protected String nombre;
+    protected String numero; // Añadido según UML
 
     public Usuario(int id, String nombre, String numero) {
         this.id = id;
@@ -11,17 +11,7 @@ public abstract class Usuario {
         this.numero = numero;
     }
 
-//Get y set
-    public int getId() {
-        return id; }
-    public void setId(int id) {
-        this.id = id; }
-    public String getNombre() {
-        return nombre; }
-    public void setNombre(String nombre) {
-        this.nombre = nombre; }
-    public String getNumero() {
-        return numero; }
-    public void setNumero(String numero) {
-        this.numero = numero; }
+    public int getId() { return id; }
+    public String getNombre() { return nombre; }
+    public String getNumero() { return numero; }
 }

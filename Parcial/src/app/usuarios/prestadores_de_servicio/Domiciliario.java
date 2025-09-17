@@ -1,27 +1,21 @@
 package app.usuarios.prestadores_de_servicio;
 
 import app.usuarios.main.Usuario;
-import app.vehiculos.*;
+import app.vehiculos.TipoVehiculo;
 
 public class Domiciliario extends Usuario {
-    private TipoVehiculo tipoVehiculo;
-    private double calificacionConductor;
+    private TipoVehiculo vehiculo;
+    private double calificacion;
+    private boolean disponible = true;
 
-    public Domiciliario(int id, String nombre, String email, TipoVehiculo tipoVehiculo) {
-        super(id, nombre, email);
-        this.tipoVehiculo = tipoVehiculo;
-        this.calificacionConductor = 0;
+    public Domiciliario(int id, String nombre, String numero, TipoVehiculo vehiculo) {
+        super(id, nombre, numero);
+        this.vehiculo = vehiculo;
+        this.calificacion = 5.0; // Calificación inicial por defecto
     }
 
-    public void aceptarServicio() {
-    }
-
-    public TipoVehiculo getTipoVehiculo() {
-        return tipoVehiculo; }
-    public void setTipoVehiculo(TipoVehiculo tipoVehiculo) {
-        this.tipoVehiculo = tipoVehiculo; }
-    public double getCalificacionConductor() {
-        return calificacionConductor; }
-    public void setCalificacionConductor(double calificacionConductor) {
-        this.calificacionConductor = calificacionConductor; }
+    public boolean isDisponible() { return disponible; }
+    public void setDisponible(boolean disponible) { this.disponible = disponible; }
+    public TipoVehiculo getVehiculo() { return vehiculo; }
+    public double getCalificacion() { return calificacion; }
 }

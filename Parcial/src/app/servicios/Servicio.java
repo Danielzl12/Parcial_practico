@@ -5,32 +5,33 @@ import app.usuarios.prestadores_de_servicio.Domiciliario;
 
 public abstract class Servicio {
     protected int id;
-    protected String direccion_origen;
-    protected String direccion_destino;
+    protected String origen;
+    protected String destino;
     protected Cliente cliente;
     protected Domiciliario domiciliario;
+    protected EstadoServicio estado = EstadoServicio.PENDIENTE;
 
-    public Servicio(int id, String direccion_origen, String direccion_destino, Cliente cliente, Domiciliario domiciliario) {
+    public Servicio(int id, String origen, String destino, Cliente cliente) {
         this.id = id;
-        this.direccion_origen = direccion_origen;
-        this.direccion_destino = direccion_destino;
+        this.origen = origen;
+        this.destino = destino;
         this.cliente = cliente;
-        this.domiciliario = domiciliario;
     }
 
     public abstract double calcularCosto();
 
-    // Getters y Setters
-    public int getId() {
-        return id; }
-    public void setId(int id) {
-        this.id = id; }
-    public String getDireccion_origen() {
-        return direccion_origen; }
-    public void setDireccion_origen(String direccion_origen) {
-        this.direccion_origen = direccion_origen; }
-    public String getDireccion_destino() {
-        return direccion_destino; }
-    public void setDireccion_destino(String direccion_destino) {
-        this.direccion_destino = direccion_destino; }
+    // Getters
+    public int getId() { return id; }
+    public Cliente getCliente() { return cliente; }
+    public Domiciliario getDomiciliario() { return domiciliario; }
+    public EstadoServicio getEstado() { return estado; }
+
+    // Setters
+    public void asignarDomiciliario(Domiciliario domiciliarioAsignado) {
+        if (domiciliarioAsignado != null && domiciliarioAsignado.isDisponible()) {
+            this.domiciliario = domiciliarioAsignado;
+            this.estado = EstadoServicio.EN_PROGRESO;
+            domiciliarioAsignado.setDisponible(false);
+        }
+    }
 }

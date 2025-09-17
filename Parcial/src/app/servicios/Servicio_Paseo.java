@@ -1,19 +1,18 @@
 package app.servicios;
 
 import app.usuarios.clientes.Cliente;
-import app.usuarios.prestadores_de_servicio.Domiciliario;
 
 public class Servicio_Paseo extends Servicio {
-    private int horasDelPaseo;
-    private int PRECIO_POR_MEDIA_HORA = 8000;
+    private int cantidadMediasHoras;
+    private static final double PRECIO_POR_MEDIA_HORA = 8000;
 
-    public Servicio_Paseo(int id, String origen, String destino, Cliente cliente, Domiciliario domiciliario, int horasDelPaseo) {
-        super(id, origen, destino, cliente, domiciliario);
-        this.horasDelPaseo = horasDelPaseo;
+    public Servicio_Paseo(int id, String origen, String destino, Cliente cliente, int cantidadMediasHoras) {
+        super(id, origen, destino, cliente);
+        this.cantidadMediasHoras = cantidadMediasHoras;
     }
 
     @Override
     public double calcularCosto() {
-        return this.horasDelPaseo * PRECIO_POR_MEDIA_HORA;
+        return this.cantidadMediasHoras * PRECIO_POR_MEDIA_HORA;
     }
 }
