@@ -1,3 +1,8 @@
+package app.usuarios.prestadores_de_servicio;
+
+import app.usuarios.main.Usuario;
+import app.vehiculos.*;
+
 public class Domiciliario extends Usuario {
     private TipoVehiculo tipoVehiculo;
     private double calificacionConductor;

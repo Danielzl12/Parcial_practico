@@ -1,3 +1,7 @@
+package app.usuarios.clientes;
+
+import app.usuarios.main.Usuario;
+
 public class Cliente extends Usuario {
     private String direccion;
     private Mascota_clase mascotaClase;

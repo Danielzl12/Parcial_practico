@@ -1,3 +1,5 @@
+package app.usuarios.clientes;
+
 public class Mascota_clase {
     private String nombre;
     private String raza;

@@ -1,3 +1,5 @@
+package app.usuarios.main;
+
 public abstract class Usuario {
     private int id;
     private String nombre;

@@ -1,3 +1,8 @@
+package app.servicios;
+
+import app.usuarios.clientes.Cliente;
+import app.usuarios.prestadores_de_servicio.Domiciliario;
+
 public class Servicio_Transporte extends Servicio {
     private int distanciaKm;
     private static final double PRECIO_POR_KM = 1200;

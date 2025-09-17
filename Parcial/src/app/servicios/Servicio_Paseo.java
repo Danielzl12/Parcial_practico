@@ -1,3 +1,8 @@
+package app.servicios;
+
+import app.usuarios.clientes.Cliente;
+import app.usuarios.prestadores_de_servicio.Domiciliario;
+
 public class Servicio_Paseo extends Servicio {
     private int horasDelPaseo;
     private int PRECIO_POR_MEDIA_HORA = 8000;

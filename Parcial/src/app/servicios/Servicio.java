@@ -1,3 +1,8 @@
+package app.servicios;
+
+import app.usuarios.clientes.Cliente;
+import app.usuarios.prestadores_de_servicio.Domiciliario;
+
 public abstract class Servicio {
     protected int id;
     protected String direccion_origen;
