@@ -11,7 +11,6 @@ public class Domiciliario extends Usuario {
     public Domiciliario(int id, String nombre, String numero, TipoVehiculo vehiculo) {
         super(id, nombre, numero);
         this.vehiculo = vehiculo;
-        this.calificacion = 5.0; // Calificación inicial por defecto
     }
 
     public boolean isDisponible() { return disponible; }

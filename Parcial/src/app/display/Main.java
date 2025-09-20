@@ -1,5 +1,6 @@
 package app.display;
 
+//import packages
 import app.servicios.Gestor_del_servicio;
 import app.servicios.Servicio;
 import app.usuarios.clientes.Cliente;
@@ -7,6 +8,7 @@ import app.usuarios.clientes.Mascota_clase;
 import app.usuarios.prestadores_de_servicio.Domiciliario;
 import app.vehiculos.TipoVehiculo;
 
+// import utilities
 import java.util.List;
 import java.util.Scanner;
 
@@ -156,7 +158,7 @@ public class Main {
         double valorVariable = 0;
         switch (tipo) {
             case 1 -> { System.out.print("Distancia en KM: "); valorVariable = Double.parseDouble(sc.nextLine()); }
-            case 2 -> { System.out.print("Cantidad de medias horas: "); valorVariable = Double.parseDouble(sc.nextLine()); }
+            case 2 -> { System.out.print("Cantidad de horas: "); valorVariable = Double.parseDouble(sc.nextLine()); }
             case 3 -> { System.out.print("Valor del producto: "); valorVariable = Double.parseDouble(sc.nextLine()); }
             default -> { System.out.println("Tipo de servicio no válido."); return; }
         }
